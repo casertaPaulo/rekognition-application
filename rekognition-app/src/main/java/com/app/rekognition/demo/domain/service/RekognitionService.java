@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.service;
+package com.app.rekognition.demo.domain.service;
 
 import com.app.rekognition.demo.exception.RekognitionApiException;
 import org.springframework.stereotype.Service;

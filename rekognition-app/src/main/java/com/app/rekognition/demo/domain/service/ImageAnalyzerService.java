@@ -1,8 +1,8 @@
-package com.app.rekognition.demo.service;
+package com.app.rekognition.demo.domain.service;
 
-import com.app.rekognition.demo.DTO.ImageResponseDTO;
-import com.app.rekognition.demo.DTO.ModerationLabelDTO;
-import com.app.rekognition.demo.controller.ImageNotificationController;
+import com.app.rekognition.demo.api.dto.ImageResponseDTO;
+import com.app.rekognition.demo.api.dto.ModerationLabelDTO;
+import com.app.rekognition.demo.api.controller.ImageNotificationController;
 import com.app.rekognition.demo.exception.RekognitionApiException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,8 @@
-package com.app.rekognition.demo.service;
+package com.app.rekognition.demo.domain.service;
 
-import com.app.rekognition.demo.DTO.ImageListDTO;
-import com.app.rekognition.demo.entity.ImageEntity;
-import com.app.rekognition.demo.repository.ImagesRepository;
+import com.app.rekognition.demo.api.dto.ImageListDTO;
+import com.app.rekognition.demo.domain.model.ImageEntity;
+import com.app.rekognition.demo.domain.repository.ImagesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
-package com.app.rekognition.demo.controller;
+package com.app.rekognition.demo.api.controller;
 
-import com.app.rekognition.demo.DTO.ImageListDTO;
-import com.app.rekognition.demo.DTO.ImageResponseDTO;
-import com.app.rekognition.demo.service.ImageAnalyzerService;
-import com.app.rekognition.demo.service.ImageService;
+import com.app.rekognition.demo.api.dto.ImageListDTO;
+import com.app.rekognition.demo.api.dto.ImageResponseDTO;
+import com.app.rekognition.demo.domain.service.ImageAnalyzerService;
+import com.app.rekognition.demo.domain.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

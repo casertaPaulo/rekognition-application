@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.entity;
+package com.app.rekognition.demo.domain.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

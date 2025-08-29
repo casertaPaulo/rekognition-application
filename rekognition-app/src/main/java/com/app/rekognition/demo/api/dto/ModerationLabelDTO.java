@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.DTO;
+package com.app.rekognition.demo.api.dto;
 
 public record ModerationLabelDTO(
         String name,

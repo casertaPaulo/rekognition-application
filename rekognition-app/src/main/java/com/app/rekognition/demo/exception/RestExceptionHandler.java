@@ -1,6 +1,5 @@
-package com.app.rekognition.demo.infra;
+package com.app.rekognition.demo.exception;
 
-import com.app.rekognition.demo.exception.AppException;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
