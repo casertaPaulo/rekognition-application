@@ -1,6 +1,7 @@
 package com.app.rekognition.demo.domain.service;
 
 import com.app.rekognition.demo.exception.RekognitionApiException;
+import com.app.rekognition.demo.infra.RekognitionAdapter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import software.amazon.awssdk.core.SdkBytes;
@@ -16,30 +17,13 @@ import java.io.IOException;
 @Service
 public class RekognitionService {
 
-    private final RekognitionClient rekognitionClient;
+    private final RekognitionAdapter rekognitionAdapter;
 
-    public RekognitionService() {
-        System.out.println("👌Rekognition service created");
-        this.rekognitionClient = RekognitionClient.builder()
-                .region(Region.US_EAST_1)
-                .build();
+    public RekognitionService(RekognitionAdapter rekognitionAdapter) {
+        this.rekognitionAdapter = rekognitionAdapter;
     }
 
     public DetectModerationLabelsResponse detectModeration(MultipartFile file) throws IOException {
-        try {
-            SdkBytes imageBytes = SdkBytes.fromInputStream(file.getInputStream());
-
-            Image image = Image.builder().bytes(imageBytes).build();
-
-            DetectModerationLabelsRequest request = DetectModerationLabelsRequest.builder()
-                    .image(image)
-                    .minConfidence(50F)
-                    .build();
-
-            return rekognitionClient.detectModerationLabels(request);
-
-        } catch (RekognitionException e) {
-            throw new RekognitionApiException(e.getMessage());
-        }
+        return rekognitionAdapter.detectModeration(file.getBytes());
     }
 }
