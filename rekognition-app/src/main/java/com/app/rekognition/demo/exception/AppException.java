@@ -7,18 +7,19 @@ public class AppException extends RuntimeException {
 
     private final HttpStatus statusCode;
     private final String exceptionTitle;
+    private final String exceptionDetail;
 
-    public AppException(HttpStatus statusCode, String exceptionTitle) {
+    public AppException(HttpStatus statusCode, String exceptionTitle, String exceptionDetail) {
         this.statusCode = statusCode;
         this.exceptionTitle = exceptionTitle;
+        this.exceptionDetail = exceptionDetail;
     }
 
     public ProblemDetail toProblemDetail() {
         var problemDetail = ProblemDetail.forStatus(statusCode);
         problemDetail.setTitle(exceptionTitle);
+        problemDetail.setDetail(exceptionDetail);
 
         return problemDetail;
     }
-
-
 }
