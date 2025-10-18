@@ -1,6 +1,3 @@
-
-# Todo: set dev-profile and prod-profile [ with git ignore and all those shit ]
-
 server:
   port: 8080
 

@@ -1,7 +1,7 @@
 package com.app.rekognition.demo.api.controller;
 
 import com.app.rekognition.demo.api.dto.ImageListDTO;
-import com.app.rekognition.demo.api.dto.ImageResponseDTO;
+import com.app.rekognition.demo.api.dto.ApplicationResponse;
 import com.app.rekognition.demo.domain.service.ImageAnalyzerService;
 import com.app.rekognition.demo.domain.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +10,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/image")
-public class ImageController {
+public class ImageModerationController {
 
     @Autowired
     private ImageAnalyzerService imageAnalyzerService;
@@ -23,7 +25,7 @@ public class ImageController {
 
 
     @PostMapping
-    public ResponseEntity<ImageResponseDTO> analyzeImage(@RequestParam("file") MultipartFile file) {
+    public ResponseEntity<ApplicationResponse> analyzeImage(@RequestParam("file") MultipartFile file) throws IOException {
        return ResponseEntity.ok(imageAnalyzerService.analyzeImage(file));
     }
 

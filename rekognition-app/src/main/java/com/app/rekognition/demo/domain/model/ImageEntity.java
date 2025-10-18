@@ -8,10 +8,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "tb_images")
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Getter @Setter
+@AllArgsConstructor @NoArgsConstructor
 public class ImageEntity {
 
     @Id
