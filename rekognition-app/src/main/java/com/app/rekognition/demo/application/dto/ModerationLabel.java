@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.api.dto;
+package com.app.rekognition.demo.application.dto;
 
 /**
  * Representa o label retornado pelo AWS Rekognition

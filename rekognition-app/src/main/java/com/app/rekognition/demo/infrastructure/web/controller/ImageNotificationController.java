@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.api.controller;
+package com.app.rekognition.demo.infrastructure.web.controller;
 
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;

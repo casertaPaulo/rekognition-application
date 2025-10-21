@@ -1,7 +1,7 @@
-package com.app.rekognition.demo.domain.service;
+package com.app.rekognition.demo.application.service;
 
-import com.app.rekognition.demo.api.dto.ApplicationResponse;
-import com.app.rekognition.demo.api.dto.ModerationLabels;
+import com.app.rekognition.demo.infrastructure.web.dto.ApplicationResponse;
+import com.app.rekognition.demo.application.dto.ModerationLabels;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

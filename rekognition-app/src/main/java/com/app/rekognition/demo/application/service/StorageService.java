@@ -1,6 +1,6 @@
-package com.app.rekognition.demo.domain.service;
+package com.app.rekognition.demo.application.service;
 
-import com.app.rekognition.demo.domain.port.StorageContentPort;
+import com.app.rekognition.demo.application.ports.out.StorageContentPort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 

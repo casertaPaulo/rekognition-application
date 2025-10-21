@@ -1,9 +1,8 @@
-package com.app.rekognition.demo.domain.service;
+package com.app.rekognition.demo.application.service;
 
-import com.app.rekognition.demo.api.dto.ImageListDTO;
+import com.app.rekognition.demo.infrastructure.web.dto.ImageListResponse;
 import com.app.rekognition.demo.domain.model.ImageEntity;
-import com.app.rekognition.demo.domain.repository.ImagesRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.app.rekognition.demo.application.repository.ImagesRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,11 +16,11 @@ public class ImageService {
         this.repository = repository;
     }
 
-    public ImageListDTO getAll() {
+    public ImageListResponse getAll() {
         List<String> result = repository.findAll().stream()
                 .map(ImageEntity::getImageUrl).toList();
 
-        return new ImageListDTO(result);
+        return new ImageListResponse(result);
     }
 
     // Salva o link retornado da imagem ‘online’ (S3) no banco de dados
@@ -33,6 +32,4 @@ public class ImageService {
         // Todo: throw exception if data non exists
         repository.deleteAll();
     }
-
-
 }

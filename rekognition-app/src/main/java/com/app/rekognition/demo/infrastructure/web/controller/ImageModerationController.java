@@ -1,9 +1,9 @@
-package com.app.rekognition.demo.api.controller;
+package com.app.rekognition.demo.infrastructure.web.controller;
 
-import com.app.rekognition.demo.api.dto.ImageListDTO;
-import com.app.rekognition.demo.api.dto.ApplicationResponse;
-import com.app.rekognition.demo.domain.service.ImageAnalyzerService;
-import com.app.rekognition.demo.domain.service.ImageService;
+import com.app.rekognition.demo.infrastructure.web.dto.ImageListResponse;
+import com.app.rekognition.demo.infrastructure.web.dto.ApplicationResponse;
+import com.app.rekognition.demo.application.service.ImageAnalyzerService;
+import com.app.rekognition.demo.application.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +30,7 @@ public class ImageModerationController {
     }
 
     @GetMapping
-    public ResponseEntity<ImageListDTO> getAll() {
+    public ResponseEntity<ImageListResponse> getAll() {
         return ResponseEntity.ok(imageService.getAll());
     }
 

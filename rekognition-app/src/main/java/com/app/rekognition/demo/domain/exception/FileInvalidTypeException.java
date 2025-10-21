@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.exception;
+package com.app.rekognition.demo.domain.exception;
 
 import org.springframework.http.HttpStatus;
 

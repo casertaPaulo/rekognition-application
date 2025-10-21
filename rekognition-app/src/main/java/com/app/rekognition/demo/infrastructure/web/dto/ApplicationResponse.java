@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.api.dto;
+package com.app.rekognition.demo.infrastructure.web.dto;
 
 public record ApplicationResponse(
         ModerationResult moderationResponse,

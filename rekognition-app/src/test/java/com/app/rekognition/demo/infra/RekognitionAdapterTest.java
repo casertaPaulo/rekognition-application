@@ -1,6 +1,6 @@
 package com.app.rekognition.demo.infra;
 
-import com.app.rekognition.demo.api.dto.ModerationLabels;
+import com.app.rekognition.demo.application.dto.ModerationLabels;
 import com.app.rekognition.demo.infrastructure.aws.RekognitionAdapter;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

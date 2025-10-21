@@ -1,11 +1,11 @@
-package com.app.rekognition.demo.domain.service;
+package com.app.rekognition.demo.application.service;
 
-import com.app.rekognition.demo.api.dto.ModerationLabel;
-import com.app.rekognition.demo.api.dto.ModerationLabels;
-import com.app.rekognition.demo.api.dto.ModerationResult;
-import com.app.rekognition.demo.domain.model.enums.ModerationStatus;
-import com.app.rekognition.demo.domain.port.ContentModerationPort;
-import com.app.rekognition.demo.exception.FileInvalidTypeException;
+import com.app.rekognition.demo.application.dto.ModerationLabel;
+import com.app.rekognition.demo.application.dto.ModerationLabels;
+import com.app.rekognition.demo.infrastructure.web.dto.ModerationResult;
+import com.app.rekognition.demo.domain.enums.ModerationStatus;
+import com.app.rekognition.demo.application.ports.out.ContentModerationPort;
+import com.app.rekognition.demo.domain.exception.FileInvalidTypeException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 

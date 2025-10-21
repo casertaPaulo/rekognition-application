@@ -1,9 +1,9 @@
 package com.app.rekognition.demo.service;
 
-import com.app.rekognition.demo.api.dto.ModerationLabels;
-import com.app.rekognition.demo.domain.port.ContentModerationPort;
-import com.app.rekognition.demo.domain.service.ContentModerationService;
-import com.app.rekognition.demo.exception.FileInvalidTypeException;
+import com.app.rekognition.demo.application.dto.ModerationLabels;
+import com.app.rekognition.demo.application.ports.out.ContentModerationPort;
+import com.app.rekognition.demo.application.service.ContentModerationService;
+import com.app.rekognition.demo.domain.exception.FileInvalidTypeException;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.mock.web.MockMultipartFile;

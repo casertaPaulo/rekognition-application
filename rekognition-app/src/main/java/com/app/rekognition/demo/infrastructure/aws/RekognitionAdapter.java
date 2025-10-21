@@ -1,9 +1,9 @@
 package com.app.rekognition.demo.infrastructure.aws;
 
-import com.app.rekognition.demo.api.dto.ModerationLabel;
-import com.app.rekognition.demo.api.dto.ModerationLabels;
-import com.app.rekognition.demo.domain.port.ContentModerationPort;
-import com.app.rekognition.demo.exception.RekognitionApiException;
+import com.app.rekognition.demo.application.dto.ModerationLabel;
+import com.app.rekognition.demo.application.dto.ModerationLabels;
+import com.app.rekognition.demo.application.ports.out.ContentModerationPort;
+import com.app.rekognition.demo.domain.exception.RekognitionApiException;
 import org.springframework.stereotype.Component;
 import software.amazon.awssdk.core.SdkBytes;
 import software.amazon.awssdk.services.rekognition.RekognitionClient;

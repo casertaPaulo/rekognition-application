@@ -1,6 +1,6 @@
 package com.app.rekognition.demo.infrastructure.aws;
 
-import com.app.rekognition.demo.domain.port.StorageContentPort;
+import com.app.rekognition.demo.application.ports.out.StorageContentPort;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;

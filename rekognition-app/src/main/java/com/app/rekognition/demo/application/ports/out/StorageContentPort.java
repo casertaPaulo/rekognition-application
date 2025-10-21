@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.domain.port;
+package com.app.rekognition.demo.application.ports.out;
 
 import org.springframework.web.multipart.MultipartFile;
 

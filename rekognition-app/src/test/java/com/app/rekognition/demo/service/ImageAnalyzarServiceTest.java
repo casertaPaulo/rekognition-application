@@ -1,9 +1,9 @@
 package com.app.rekognition.demo.service;
 
-import com.app.rekognition.demo.domain.service.ContentModerationService;
-import com.app.rekognition.demo.domain.service.ImageAnalyzerService;
+import com.app.rekognition.demo.application.service.ContentModerationService;
+import com.app.rekognition.demo.application.service.ImageAnalyzerService;
 
-import com.app.rekognition.demo.domain.service.StorageService;
+import com.app.rekognition.demo.application.service.StorageService;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

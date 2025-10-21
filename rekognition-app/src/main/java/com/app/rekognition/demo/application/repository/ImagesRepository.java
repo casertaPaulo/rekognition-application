@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.domain.repository;
+package com.app.rekognition.demo.application.repository;
 
 import com.app.rekognition.demo.domain.model.ImageEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

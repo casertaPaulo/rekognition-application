@@ -1,4 +1,4 @@
-package com.app.rekognition.demo.domain.model.enums;
+package com.app.rekognition.demo.domain.enums;
 
 public enum ModerationStatus {
     APPROVED,
