@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ImageService {
+public class PersistenceService {
 
     private final ImagesRepository repository;
 
-    public ImageService(ImagesRepository repository) {
+    public PersistenceService(ImagesRepository repository) {
         this.repository = repository;
     }
 

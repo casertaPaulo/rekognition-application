@@ -25,7 +25,7 @@ public class ContentModerationServiceTest {
     public void shouldThrowExceptionWhenFileIsDifferentFromImage() {
         MockMultipartFile file = new MockMultipartFile("file", "document.pdf", "application/pdf", "content".getBytes());
 
-        assertThrows(FileInvalidTypeException.class, () -> moderationService.analyze(file));
+        assertThrows(FileInvalidTypeException.class, () -> moderationService.getModerationLabels(file));
 
         verifyNoInteractions(contentModerationPort);
     }
@@ -39,7 +39,7 @@ public class ContentModerationServiceTest {
         when(contentModerationPort.detectModeration(any())).thenReturn(mockedResult);
 
 
-        ModerationLabels result = moderationService.analyze(file);
+        ModerationLabels result = moderationService.getModerationLabels(file);
         assertNotNull(result);
         verify(contentModerationPort, times(1)).detectModeration(any());
     }

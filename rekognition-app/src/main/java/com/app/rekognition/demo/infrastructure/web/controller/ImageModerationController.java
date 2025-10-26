@@ -3,7 +3,7 @@ package com.app.rekognition.demo.infrastructure.web.controller;
 import com.app.rekognition.demo.infrastructure.web.dto.ImageListResponse;
 import com.app.rekognition.demo.infrastructure.web.dto.ApplicationResponse;
 import com.app.rekognition.demo.application.service.ImageAnalyzerService;
-import com.app.rekognition.demo.application.service.ImageService;
+import com.app.rekognition.demo.application.service.PersistenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class ImageModerationController {
     private ImageAnalyzerService imageAnalyzerService;
 
     @Autowired
-    private ImageService imageService;
+    private PersistenceService imageService;
 
 
     @PostMapping

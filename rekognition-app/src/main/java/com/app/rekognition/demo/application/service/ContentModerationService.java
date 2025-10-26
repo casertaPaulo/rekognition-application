@@ -22,7 +22,7 @@ public class ContentModerationService {
     }
 
     // Retorna uma lista de labels de moderação do Adapter [AWS Rekognition]
-    public ModerationLabels analyze(MultipartFile file) throws IOException {
+    public ModerationLabels getModerationLabels(MultipartFile file) throws IOException {
         // Verifica se o arquivo é uma imagem
         if (file.getContentType() == null || !file.getContentType().startsWith("image/"))
             throw new FileInvalidTypeException();
