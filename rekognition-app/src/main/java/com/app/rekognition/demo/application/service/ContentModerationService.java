@@ -34,7 +34,11 @@ public class ContentModerationService {
     // Todo: Desenvolver o método de filtro de labels
     public ModerationResult evaluateLabel(ModerationLabels moderationLabels) {
         Map<String, Float> blockRules = Map.of( // Todo: put this on a database for reactive changes
-          "Violence", 50f
+                "Violence", 0f,
+                "Middle Finger", 0f,
+                "Rude Gestures", 0f,
+                "Non-Explicit Nudity of Intimate parts and Kissing", 0f
+
         );
 
         List<ModerationLabel> violations = new ArrayList<>();
