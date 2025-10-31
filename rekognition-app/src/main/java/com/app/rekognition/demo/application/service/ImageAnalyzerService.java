@@ -2,6 +2,7 @@ package com.app.rekognition.demo.application.service;
 
 import com.app.rekognition.demo.application.ports.out.StorageContentPort;
 import com.app.rekognition.demo.domain.enums.ModerationStatus;
+import com.app.rekognition.demo.infrastructure.web.controller.ImageNotificationController;
 import com.app.rekognition.demo.infrastructure.web.dto.ApplicationResponse;
 import com.app.rekognition.demo.application.dto.ModerationLabels;
 import com.app.rekognition.demo.infrastructure.web.dto.ModerationResult;
@@ -23,6 +24,9 @@ public class ImageAnalyzerService {
     @Autowired
     private PersistenceService persistenceService;
 
+    @Autowired
+    private ImageNotificationController notification;
+
     public ApplicationResponse analyzeImage(MultipartFile file) throws IOException {
 
         ModerationLabels labels = contentModerationService.getModerationLabels(file);
@@ -33,6 +37,7 @@ public class ImageAnalyzerService {
         if (result.status() == ModerationStatus.APPROVED) {
             String urlToImageInS3 = storageContentPort.uploadContent(file);
             persistenceService.saveImageUrl(urlToImageInS3);
+            notification.sendImageNotification(urlToImageInS3);
             return new ApplicationResponse(result, urlToImageInS3);
         }
 
